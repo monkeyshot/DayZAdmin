@@ -1,10 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <items>
+	<s5Rnd_127x99_as50>
+		<Type>heavyammo</Type>
+		<Slots>1</Slots>
+	</s5Rnd_127x99_as50>
     <s100Rnd_762x51_M240>
         <Type>heavyammo</Type>
         <Slots>2</Slots>
     </s100Rnd_762x51_M240>
-    <s10Rnd_127x99_m107>
+    <s10Rnd_127x99_m107>	
         <Type>heavyammo</Type>
         <Slots>1</Slots>
     </s10Rnd_127x99_m107>
