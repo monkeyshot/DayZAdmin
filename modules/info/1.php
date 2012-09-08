@@ -127,16 +127,16 @@ while ($row=mysql_fetch_array($res)) {
 							</div>							
 						</div>
 						<div class="statstext" style="width:180px;margin-left:205px;margin-top:-95px">
-							<?echo 'Zombie kills:&nbsp;'.$row['kills'];?>
+							<?echo 'Zombie kills:&nbsp;'.$row['zombie_kills'];?>
 						</div>
 						<div class="statstext" style="width:180px;margin-left:205px;margin-top:-75px">
-							<?echo 'Zombie headshots:&nbsp;'.$row['hs'];?>
+							<?echo 'Zombie headshots:&nbsp;'.$row['headshots'];?>
 						</div>
 						<div class="statstext" style="width:180px;margin-left:205px;margin-top:-55px">
-							<?echo 'Human killed:&nbsp;'.$row['hkills'];?>
+							<?echo 'Human killed:&nbsp;'.$row['survivor_kills'];?>
 						</div>
 						<div class="statstext" style="width:180px;margin-left:205px;margin-top:-35px">
-							<?echo 'Bandit killed:&nbsp;'.$row['bkills'];?>
+							<?echo 'Bandit killed:&nbsp;'.$row['bandit_kills'];?>
 						</div>
 					</div>
 					<div class="gear_inventory">
