@@ -82,12 +82,12 @@
 					$Worldspace = explode(",", $Worldspace);					
 					if(array_key_exists(2,$Worldspace)){$x = $Worldspace[2];}
 					if(array_key_exists(1,$Worldspace)){$y = $Worldspace[1];}
-					$dead = ($row['death'] ? '_dead' : '');
+					$dead = ($row['is_Dead'] ? '_dead' : '');
 					$inventory = substr($row['inventory'], 0, 40)."...";
 					$backpack = substr($row['backpack'], 0, 40)."...";
 					$name = $row['name'];
 					$id = $row['id'];
-					$uid = $row['uid'];
+					$uid = $row['unique_id'];
 					$model = $row['model'];
 					
 				}				
