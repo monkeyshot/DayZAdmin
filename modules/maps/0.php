@@ -61,7 +61,7 @@
 				$good = trim(preg_replace("/\([^\)]+\)/", "", $good));
 				$good = preg_replace("[ +]", " ", $good);
 
-				$query = "SELECT * FROM main WHERE name LIKE '%". str_replace(" ", "%' OR name LIKE '%", $good). "%' ORDER BY lastupdate DESC LIMIT 1"; 				
+				$query = "select * from (SELECT profile.name, survivor.* from profile, survivor as survivor where profile.unique_id = survivor.unique_id) as T where name LIKE '%". str_replace(" ", "%' OR name LIKE '%", $good). "%' ORDER BY last_update DESC LIMIT 1"; 				
 
 				$res = null;
 				$res = mysql_query($query) or die(mysql_error());
@@ -79,7 +79,7 @@
 				while ($row=mysql_fetch_array($res)) {
 					$Worldspace = str_replace("[", "", $row['pos']);
 					$Worldspace = str_replace("]", "", $Worldspace);
-					$Worldspace = explode("|", $Worldspace);					
+					$Worldspace = explode(",", $Worldspace);					
 					if(array_key_exists(2,$Worldspace)){$x = $Worldspace[2];}
 					if(array_key_exists(1,$Worldspace)){$y = $Worldspace[1];}
 					$dead = ($row['death'] ? '_dead' : '');

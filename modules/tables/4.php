@@ -40,14 +40,14 @@
 			$query2 = "SELECT * FROM objects WHERE id = ".$aDoor[$i].""; 
 			$res2 = mysql_query($query2) or die(mysql_error());
 			while ($row2=mysql_fetch_array($res2)) {
-				$query2 = "INSERT INTO `logs`(`action`, `user`, `timestamp`) VALUES ('DELETE VEHICLE: ".$row2['otype']." - ".$row2['uid']."','{$_SESSION['login']}',NOW())";
+				$query2 = "INSERT INTO `logs`(`action`, `user`, `timestamp`) VALUES ('DELETE VEHICLE: ".$row2['otype']." - ".$row2['unique_id']."','{$_SESSION['login']}',NOW())";
 				$sql2 = mysql_query($query2) or die(mysql_error());
 				$query2 = "DELETE FROM `objects` WHERE id='".$aDoor[$i]."'";
 				$sql2 = mysql_query($query2) or die(mysql_error());
 				$delresult .= '<div id="message-green">
 				<table border="0" width="100%" cellpadding="0" cellspacing="0">
 				<tr>
-					<td class="green-left">Vehicle '.$row2['otype'].' - '.$row2['uid'].' successfully removed!</td>
+					<td class="green-left">Vehicle '.$row2['otype'].' - '.$row2['unique_id'].' successfully removed!</td>
 					<td class="green-right"><a class="close-green"><img src="'.$path.'images/table/icon_close_green.gif" alt="" /></a></td>
 				</tr>
 				</table>

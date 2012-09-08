@@ -19,7 +19,7 @@ $query = "INSERT INTO `logs`(`action`, `user`, `timestamp`) VALUES ('ITEMS CHECK
 	require_once($path.'modules/xml2array.php');
 	$items_xml = XML2Array::createArray($xml);
 	
-	$query = "SELECT * FROM main";
+	$query = "select profile.name, survivor.* from profile, survivor as survivor where profile.unique_id = survivor.unique_id";
 	$res = mysql_query($query) or die(mysql_error());
 	$number = mysql_num_rows($res);
 	$rows = null;

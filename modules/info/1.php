@@ -3,7 +3,7 @@ $cid = '';
 if (isset($_GET['cid'])){
 	$cid = " AND id ='".$_GET['cid']."'";
 }
-$query = "SELECT * FROM main WHERE uid = ".$_GET["id"].$cid." LIMIT 1"; 
+$query = "select * from (SELECT profile.name, survivor.* from profile, survivor as survivor where profile.unique_id = survivor.unique_id) as T where unique_id = ".$_GET["id"].$cid." LIMIT 1"; 
 $res = mysql_query($query) or die(mysql_error());
 $number = mysql_num_rows($res);
 while ($row=mysql_fetch_array($res)) {
@@ -11,7 +11,7 @@ while ($row=mysql_fetch_array($res)) {
 	
 	$Worldspace = str_replace("[", "", $row['pos']);
 	$Worldspace = str_replace("]", "", $Worldspace);
-	$Worldspace = explode("|", $Worldspace);
+	$Worldspace = explode(",", $Worldspace);
 	$Inventory = $row['inventory'];
 	$Inventory = str_replace("|", ",", $Inventory);
 	//$Inventory = str_replace('"', "", $Inventory);
@@ -81,7 +81,7 @@ while ($row=mysql_fetch_array($res)) {
 ?>	
 	<div id="page-heading">
 		<h1><? echo "<title>".$row['name']." - ".$sitename."</title>"; ?></h1>
-		<h1><? echo $row['name']; ?> - <? echo $row['uid']; ?> - Last save: <? echo $row['lastupdate']; ?></h1>
+		<h1><? echo $row['name']; ?> - <? echo $row['unique_id']; ?> - Last save: <? echo $row['last_update']; ?></h1>
 	</div>
 	<!-- end page-heading -->
 

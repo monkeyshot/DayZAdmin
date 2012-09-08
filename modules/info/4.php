@@ -25,7 +25,7 @@ while ($row=mysql_fetch_array($res)) {
 	$ownerid = "";
 	$owneruid = "";
 	if ($row['oid'] != "0"){
-		$query = "SELECT * FROM main WHERE id = ".$row['oid']." LIMIT 1"; 
+		$query = "SELECT * FROM survivor WHERE id = ".$row['oid']." LIMIT 1"; 
 		$res2	= mysql_query($query) or die(mysql_error());
 		while ($row2=mysql_fetch_array($res2)) {
 			$owner = $row2['name'];

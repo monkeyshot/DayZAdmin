@@ -29,8 +29,9 @@ $pagetitle = "Server control";
 				$exestatus = str_replace('"', "", $exestatus);
 				
 				if ($exestatus == strtolower($gameexe)){
-					$output = exec('taskkill /IM '.$exestatus);
-					$query = "INSERT INTO `logs`(`action`, `user`, `timestamp`) VALUES ('STOP SERVER','{$_SESSION['login']}',NOW())";
+					//$output = exec('taskkill /IM '.$exestatus);
+					exec('start /B taskkill /f /IM arma2oaserver.exe', $output = array());
+					$query = "INSERT INTO `logs`(`action`, `user`, `timestamp`) VALUES ('STOP 1 SERVER','{$_SESSION['login']}',NOW())";
 					$sql2 = mysql_query($query) or die(mysql_error());
 				}
 				sleep(10);
@@ -44,7 +45,7 @@ $pagetitle = "Server control";
 				
 				if ($exestatus == strtolower($gameexe)){
 					$output = exec('taskkill /IM '.$exestatus);
-					$query = "INSERT INTO `logs`(`action`, `user`, `timestamp`) VALUES ('STOP SERVER','{$_SESSION['login']}',NOW())";
+					$query = "INSERT INTO `logs`(`action`, `user`, `timestamp`) VALUES ('STOP 2 SERVER','{$_SESSION['login']}',NOW())";
 					$sql2 = mysql_query($query) or die(mysql_error());
 
 				}

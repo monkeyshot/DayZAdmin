@@ -7,15 +7,15 @@ if (isset($_SESSION['user_id']))
 			$pagetitle = "Online players";
 			break;
 		case 1:
-			$query = "SELECT * FROM main WHERE death = 0"; 
+			$query = "select profile.name, survivor.* from profile, survivor as survivor where profile.unique_id = survivor.unique_id and survivor.is_dead = '0'"; 
 			$pagetitle = "Alive players";		
 			break;
 		case 2:
-			$query = "SELECT * FROM main WHERE death = 1"; 
+			$query = "select profile.name, survivor.* from profile, survivor as survivor where profile.unique_id = survivor.unique_id and survivor.is_dead = '1'"; 
 			$pagetitle = "Dead players";	
 			break;
 		case 3:
-			$query = "SELECT * FROM main"; 
+			$query = "select profile.name, survivor.* from profile, survivor as survivor where profile.unique_id = survivor.unique_id"; 
 			$pagetitle = "All players";	
 			break;
 		case 4:
