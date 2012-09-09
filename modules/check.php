@@ -19,7 +19,7 @@ $query = "INSERT INTO `logs`(`action`, `user`, `timestamp`) VALUES ('ITEMS CHECK
 	require_once($path.'modules/xml2array.php');
 	$items_xml = XML2Array::createArray($xml);
 	
-	$query = "select profile.name, survivor.* from profile, survivor as survivor where profile.unique_id = survivor.unique_id";
+	$query = "select * from (SELECT profile.name, survivor.* from profile, survivor as survivor where profile.unique_id = survivor.unique_id) as T";
 	$res = mysql_query($query) or die(mysql_error());
 	$number = mysql_num_rows($res);
 	$rows = null;
@@ -103,8 +103,8 @@ $query = "INSERT INTO `logs`(`action`, `user`, `timestamp`) VALUES ('ITEMS CHECK
 		
 		if (count($Unknown)>0){
 			$rows .= "<tr>
-				<td><a href=\"index.php?view=info&show=1&id=".$row['uid']."&cid=".$row['id']."\">".$row['name']."</a></td>
-				<td><a href=\"index.php?view=info&show=1&id=".$row['uid']."&cid=".$row['id']."\">".$row['uid']."</a></td>
+				<td><a href=\"index.php?view=info&show=1&id=".$row['unique_id']."&cid=".$row['id']."\">".$row['name']."</a></td>
+				<td><a href=\"index.php?view=info&show=1&id=".$row['unique_id']."&cid=".$row['id']."\">".$row['unique_id']."</a></td>
 				<td>top:".round((154-($Worldspace[2]/100)))." left:".round(($Worldspace[1]/100))."</td>
 				<td>";
 				foreach($Unknown as $uitem => $uval)
