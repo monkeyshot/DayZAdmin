@@ -120,7 +120,7 @@ if (isset($_SESSION['user_id']))
 
         Demo.ImgMapType.prototype.tileSize = new google.maps.Size(256, 256);
         Demo.ImgMapType.prototype.minZoom = 2;
-        Demo.ImgMapType.prototype.maxZoom = 10;
+        Demo.ImgMapType.prototype.maxZoom = 6;
 
         Demo.ImgMapType.prototype.getTile = function (coord, zoom, ownerDocument) {
             var tilesCount = Math.pow(2, zoom);

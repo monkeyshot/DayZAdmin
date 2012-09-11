@@ -98,7 +98,7 @@ function row_player($row){
 			$BackpackPreview .= '<div class="preview_gear_slot" style="margin-top:0px;width:47px;height:47px;"></div>';
 		}			
 	}
-	$icon = '<img src="'.$path.'images/icons/player'.($row['death'] ? '_dead' : '').'.png" title="" alt=""/>';
+	$icon = '<img src="'.$path.'images/icons/player'.($row['is_dead'] ? '_dead' : '').'.png" title="" alt=""/>';
 	
 	$tablerow = "<tr>
 		<td align=\"center\" class=\"gear_preview\">".$icon."</td>

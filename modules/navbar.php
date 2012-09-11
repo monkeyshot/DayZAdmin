@@ -84,6 +84,8 @@ if (isset($_SESSION['user_id']))
 								<li class="li-add-new-user"><a href="index.php?view=map&show=1" class="class:newarticle item">Alive</a></li>
 								<li class="li-add-new-user"><a href="index.php?view=map&show=2" class="class:newarticle item">Dead</a></li>
 								<li class="li-add-new-user"><a href="index.php?view=map&show=3" class="class:newarticle item">All</a></li>
+								<li class="li-add-new-user"><a href="index.php?view=map&show=6" class="class:newarticle item">Online P & V</a></li>
+								
 							</ul>
 						</li>
 						<li class="li-groups parent"><a href="#nogo" class="class:groups daddy item">Vehicles</a>

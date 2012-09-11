@@ -138,6 +138,9 @@ while ($row=mysql_fetch_array($res)) {
 						<div class="statstext" style="width:180px;margin-left:205px;margin-top:-35px">
 							<?echo 'Bandit killed:&nbsp;'.$row['bandit_kills'];?>
 						</div>
+						<div class="statstext" style="width:180px;margin-left:205px;margin-top:-15px">
+							<?echo 'Time:&nbsp;'.round($row['survival_time']);?>
+						</div>
 					</div>
 					<div class="gear_inventory">
 						<div class="gear_slot" style="margin-left:1px;margin-top:48px;width:80px;height:80px;">
