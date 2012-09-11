@@ -43,11 +43,11 @@ if (isset($_SESSION['user_id']))
 			$pagetitle = "Ingame vehicles";	
 			break;
 		case 5:
-			$query = "SELECT * FROM spawns";
+			$query = "SELECT * FROM spawns WHERE world = 'chernarus'";
 			$pagetitle = "Vehicle spawn locations";	
 			break;
 		case 6:
-			$query = "SELECT * FROM spawns";
+			$query = "SELECT * FROM spawns WHERE world = 'chernarus'";
 			$pagetitle = "TEST Online Players";	
 			break;
 		default:
