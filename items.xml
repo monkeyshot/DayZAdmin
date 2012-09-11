@@ -414,10 +414,10 @@
         <Type>rifle</Type>
         <Slots>10</Slots>
     </sKSVK>
-    <sM107>
+    <sm107>
         <Type>rifle</Type>
         <Slots>10</Slots>
-    </sM107>
+    </sm107>
     <sMR43>
         <Type>rifle</Type>
         <Slots>10</Slots>
@@ -658,10 +658,10 @@
         <Type>rifle</Type>
         <Slots>10</Slots>
     </sm16a4>
-    <sM16A4_ACG>
+    <sm16a4_acg>
         <Type>rifle</Type>
         <Slots>10</Slots>
-    </sM16A4_ACG>
+    </sm16a4_acg>
     <sM16A4_GL>
         <Type>rifle</Type>
         <Slots>10</Slots>
