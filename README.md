@@ -1,3 +1,9 @@
+Added folder /lingor to work for Bliss Lingor.  Requires database named dayzlingor.
+
+
+
+Below is original Readme.md from original author katzsmile
+================================
 DayZAdmin for Sanctuary
 =========
 
