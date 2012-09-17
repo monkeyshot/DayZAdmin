@@ -4,10 +4,10 @@
 	$hostname = "127.0.0.1";  //Database host
 	$serverip = "127.0.0.1";  //game-server host
 	$rconpassword = "123456"; //rcon password
-	$serverport = 2302; //server port
+	$serverport = 2302; //server port : ALSO MAKE THIS CHANGE IN root/lingor/modules/GameQ/games.ini for ARMA 2
 	$username = "dayz"; //database user
 	$password = "123456"; //database password
-	$dbName = "dayz"; //database name. SHOULD NOT BE SAME AS CHERNARUS database name!
+	$dbName = "dayz"; //database name. SHOULD NOT BE SAME AS CHERNARUS database name! 
 	$sitename = "DayZ Administration"; //Admin panel name
 	$gamepath = "D:".DS."arma2"; //path to the game, ex. "D:\arma2"
 	$gameexe = "arma2oaserver.exe"; //server executable name
