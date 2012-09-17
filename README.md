@@ -1,5 +1,6 @@
 Added folder /lingor to work for Bliss Lingor.  Requires database named dayzlingor.
 
+You'll need to run the SQL file against your Lingor Database as well.
 
 
 Below is original Readme.md from original author katzsmile
